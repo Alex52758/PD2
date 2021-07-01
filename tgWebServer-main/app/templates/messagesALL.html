@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<H3>Отправить сообщение всем</H3>
+<form action="newBroadcast" method="post">
+        <input class="col-6" type="text" id="msg" name="msg" >
+        <button type="submit" class="btn btn-outline-primary me-2">Отправить</button>
+</form>
+        
+<form action="newDirect" method="post">
+        <H3>ID сообщения</H3>
+        <H7>ID пользователя</H7>
+        <input  type="text" id="user_id" name="user_id" >
+        <H7><br>Сообщение</H7>
+        <input class="col-5" type="text" id="msg" name="msg" >
+        <button type="submit" class="btn btn-outline-primary me-2">Отправить</button>
+</form>
+
+{% endblock %}

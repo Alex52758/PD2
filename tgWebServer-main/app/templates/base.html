@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/main.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="navbar-dark bg-dark d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use href="../static/logo.png"></use></svg>
+            <span class="fs-5 text-light">Админ панель</span>
+          </a>
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="/newm" class="nav-link active" aria-current="page">Написать сообщение</a></li>
+            <svg class="bi me-2" width="40" height="32"><use href="../static/logo.png"></use></svg>
+          </ul>
+        </header>
+      </div>
+      <main class="flex-shrink-0">
+    <div class="container">
+    {% block content %}
+    hi
+    {% endblock %}
+    </div>
+  </main>
+  <div class="container position-absolute bottom-0 start-50 translate-middle-x">
+    <footer class="footer mt-auto py-3 bg-dark">
+  <div class="container">
+    <svg class="bi me-2" width="40" height="25"><use href="../static/logo.png"></use></svg>
+    <span class="text-muted text-light">Админ панель</span>
+  </div>
+</div>
+</footer>
+</body>
+</html>

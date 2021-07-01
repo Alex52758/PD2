@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<H1>Новые сообщения</H1>
+<div class="table-responsive">
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr class="active">
+        <th>id</th>
+        <th>Сообщение</th>
+        <th>Дата</th>
+        <th>Reciever</th>
+    </tr>
+    </thead>
+    {% for msg in msgs %}
+    <thead>
+    <tr class="active">
+      <td>{{ msg.id }}</td>
+      <td>{{ msg.text }}</td>
+      <td>{{ msg.date }}</td>
+      <td>{{ msg.reciever }}</td>
+    </tr>
+    </thead>
+    {% endfor %}
+</table>
+<H1>Архивное сообщение</H1>
+<table class="table table-hover">
+  <thead>
+    <tr class="active">
+        <th>id</th>
+        <th>Сообщение</th>
+        <th>Дата</th>
+        <th>Reciever</th>
+    </tr>
+  </thead>
+    {% for ms in arch %}
+    <thead>
+    <tr class="active">
+      <td>{{ ms.id }}</td>
+      <td>{{ ms.text }}</td>
+      <td>{{ ms.date }}</td>
+      <td>{{ ms.reciever }}</td>
+    </tr>
+    </thead>
+    {% endfor %}
+</table>
+</div>
+{% endblock %}
